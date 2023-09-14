@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SelectImages.MainPage">
+
+    <ScrollView
+        BackgroundColor="DarkGray">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,10"
+            VerticalOptions="Start">
+            <Label Text="Select Imager Machine 3000"
+                   HorizontalTextAlignment="Center"
+                   FontSize="22"
+                   ></Label>
+            <Button Text="Select Image"
+                    x:Name="selectImageBtn"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Clicked="selectImageBtn_Clicked"
+                    >
+                <Button.Shadow>
+                    <Shadow Brush="Black"
+                            Offset="12,5"
+                            Radius="17"
+                            Opacity="0.6"></Shadow>
+                </Button.Shadow>
+            </Button>
+            <Entry Placeholder="Enter a title bitch"
+                   x:Name="TitleEntry"
+                   WidthRequest="300"
+                   HeightRequest="25"
+                   HorizontalOptions="Center"
+                   ></Entry>
+            <Editor Placeholder="Enter a description please"
+                    WidthRequest="800"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    x:Name="DescriptionEditor"></Editor>
+            <Button Text="Add!"
+                    x:Name="addImageBtn"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Clicked="addImageBtn_Clicked"
+                    >
+                <Button.Shadow>
+                    <Shadow Brush="Black"
+                            Offset="12,5"
+                            Radius="17"
+                            Opacity="0.6"></Shadow>
+                </Button.Shadow>
+            </Button>
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Image
+                        x:Name="SelectedImage"
+                        WidthRequest="400"></Image>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
